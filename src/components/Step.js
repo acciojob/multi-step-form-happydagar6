@@ -7,7 +7,8 @@ const Step = ({ currentStep, formData, onInputChange, onNext, onPrevious, onSubm
     // Step 1
     if(currentStep === 1) {
         stepContent = (
-            <div>
+            // ✅ FIX 1
+            <div id="step1">
                 <h3>Customer Details</h3>
                 <div className='input-group'>
                     <label>First Name:</label>
@@ -34,7 +35,8 @@ const Step = ({ currentStep, formData, onInputChange, onNext, onPrevious, onSubm
     // Step 2
     else if(currentStep === 2) {
         stepContent = (
-            <div>
+            // ✅ FIX 2
+            <div id="step2">
                 <h3>Car Details</h3>
                 <div className='input-group'>
                     <label>Model:</label>
@@ -63,13 +65,14 @@ const Step = ({ currentStep, formData, onInputChange, onNext, onPrevious, onSubm
 
         const isExpiryValidFormat = /^(0[1-9]|1[0-2])\/\d{2}$/.test(formData.expiry_date) || formData.expiry_date.length === 0;
         stepContent = (
-            <div>
+            // ✅ FIX 3
+            <div id="step3">
                 <h3>Payment Details</h3>
                 <div className='input-group'>
                     <label>Credit Card Number:</label>
                     <input
                         type='text'
-                        id='credit_card'
+                        id='card_info' // ✅ FIX 4: credit_card ko badal kar card_info kar diya
                         value={formData.card_info}
                         onChange={onInputChange}
                     />
