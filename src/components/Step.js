@@ -6,7 +6,7 @@ const Step = ({ currentStep, formData, onInputChange, onNext, onPrevious, onSubm
   if (currentStep === 1) {
     return (
 
-      <div id="step1" key="step1">
+      <div id="step1">
         <h3>Customer Details</h3>
         <div className='input-group'>
           <label>First Name:</label>
@@ -27,7 +27,7 @@ const Step = ({ currentStep, formData, onInputChange, onNext, onPrevious, onSubm
   // STEP 2 UI
   if (currentStep === 2) {
     return (
-      <div id="step2" key="step2">
+      <div id="step2">
         <h3>Car Details</h3>
         <div className='input-group'>
           <label>Model:</label>
